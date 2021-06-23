@@ -3,7 +3,9 @@ import { ActivatedRouteSnapshot, CanActivate, CanActivateChild, RouterStateSnaps
 
 import { MetaService } from './meta.service';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class MetaGuard implements CanActivate, CanActivateChild {
   constructor(private readonly meta: MetaService) {}
 

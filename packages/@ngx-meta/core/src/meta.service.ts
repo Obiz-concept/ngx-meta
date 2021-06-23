@@ -7,7 +7,9 @@ import { MetaSettings } from './models/meta-settings';
 import { PageTitlePositioning } from './models/page-title-positioning';
 import { isObservable, isPromise } from './util';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class MetaService {
   protected readonly settings: MetaSettings;
   private readonly isMetaTagSet: any;
