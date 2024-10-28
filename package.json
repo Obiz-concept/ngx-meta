@@ -1,97 +1,38 @@
 {
   "name": "ngx-meta",
-  "version": "12.0.2",
-  "description": "Dynamic page title & meta tags utility for Angular (w/server-side rendering)",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/fulls1z3/ngx-meta.git"
-  },
-  "keywords": [],
-  "author": {
-    "name": "Burak Tasci",
-    "email": "mail@buraktasci.com"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/fulls1z3/ngx-meta/issues"
-  },
-  "homepage": "https://github.com/fulls1z3/ngx-meta#readme",
+  "version": "0.0.0",
   "scripts": {
-    "clean": "rimraf dist",
-    "build:core": "ts-node tools/build/packager.ts core",
-    "build": "npm run build:core",
-    "lint": "tslint -p ./tsconfig.lint.json --force",
-    "lint:check": "tslint-config-prettier-check ./tslint.lint.json",
-    "rebuild": "npm run clean && npm run build",
-    "ci:before": "greenkeeper-lockfile-update",
-    "ci:after": "greenkeeper-lockfile-upload",
-    "test": "jest --runInBand --colors",
-    "test:ci": "jest --ci --updateSnapshot --colors",
-    "release": "standard-version"
+    "ng": "./node_modules/.bin/ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/common": "^18.2.8",
+    "@angular/router": "^18.2.8",
+    "@angular/compiler": "^18.2.8",
+    "@angular/core": "^18.2.8",
+    "@angular/platform-browser": "^18.2.8",
+    "@angular/platform-browser-dynamic": "^18.2.8",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.10"
   },
   "devDependencies": {
-    "@angular/common": "^12.0.3",
-    "@angular/compiler": "^12.0.3",
-    "@angular/compiler-cli": "^12.0.3",
-    "@angular/core": "^12.0.3",
-    "@angular/platform-browser": "^12.0.3",
-    "@angular/platform-browser-dynamic": "^12.0.3",
-    "@angular/router": "^12.0.3",
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
-    "@types/jest": "^23.3.14",
-    "@types/lodash": "^4.14.150",
-    "@types/node": "^10.0.0",
-    "angular-tslint-rules": "^1.20.4",
-    "codelyzer": "^6.0.2",
-    "cz-conventional-changelog": "^3.1.0",
-    "husky": "^4.2.0",
-    "jest": "^23.6.0",
-    "jest-junit-reporter": "^1.1.0",
-    "jest-preset-angular": "8.1.2",
-    "lerna": "^3.20.2",
-    "lint-staged": "^10.0.0",
-    "lodash": "^4.17.15",
-    "ng-packagr": "^12.0.3",
-    "prettier": "1.19.1",
-    "prettier-tslint": "^0.4.2",
-    "reflect-metadata": "^0.1.13",
-    "request": "^2.88.2",
-    "rimraf": "^3.0.2",
-    "rxjs": "~6.6.7",
-    "ts-node": "^8.9.0",
-    "tsickle": "^0.38.0",
-    "tslint": "^6.1.3",
-    "tslint-config-prettier": "^1.18.0",
-    "typescript": "~4.2.4",
-    "zone.js": "~0.11.4"
-  },
-  "jest": {
-    "preset": "jest-preset-angular",
-    "setupTestFrameworkScriptFile": "./tools/test/jest.setup.ts",
-    "testResultsProcessor": "./node_modules/jest-junit-reporter",
-    "testMatch": [
-      "**/+(*.)+(spec|test).+(ts|js)?(x)"
-    ],
-    "globals": {
-      "ts-jest": {
-        "tsConfigFile": "./tsconfig.json"
-      },
-      "__TRANSFORM_HTML__": true
-    },
-    "moduleNameMapper": {
-      "^@ngx-meta/core": "<rootDir>/packages/@ngx-meta/core/src/index.ts"
-    },
-    "cache": false,
-    "silent": true,
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "packages/@ngx-meta/core/src/**.ts"
-    ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+    "@angular-devkit/build-angular": "^18.2.9",
+    "@angular-eslint/builder": "18.4.0",
+    "@angular-eslint/eslint-plugin": "18.4.0",
+    "@angular-eslint/eslint-plugin-template": "18.4.0",
+    "@angular-eslint/schematics": "18.4.0",
+    "@angular-eslint/template-parser": "18.4.0",
+    "@angular/cli": "^18.2.9",
+    "@angular/compiler-cli": "^18.2.0",
+    "@types/node": "^18.18.0",
+    "@typescript-eslint/eslint-plugin": "7.11.0",
+    "@typescript-eslint/parser": "7.11.0",
+    "eslint": "^9.13.0",
+    "ng-packagr": "^18.2.0",
+    "typescript": "~5.5.2"
   }
 }
